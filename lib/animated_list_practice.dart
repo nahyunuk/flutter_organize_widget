@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AnimatedListPratice extends StatefulWidget {
-  const AnimatedListPratice({super.key});
+class AnimatedListPractice extends StatefulWidget {
+  const AnimatedListPractice({super.key});
 
   @override
-  State<AnimatedListPratice> createState() => _AnimatedListPraticeState();
+  State<AnimatedListPractice> createState() => _AnimatedListPraticeState();
 }
 
-class _AnimatedListPraticeState extends State<AnimatedListPratice> {
+class _AnimatedListPraticeState extends State<AnimatedListPractice> {
   final GlobalKey<AnimatedListState> _toDoListKey =
       GlobalKey<AnimatedListState>();
   final TextEditingController _titleController = TextEditingController();

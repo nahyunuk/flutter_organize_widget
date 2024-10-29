@@ -10,42 +10,36 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+
+
   Widget build(BuildContext context) {
+    Widget _buildListItem(BuildContext context, String title, Widget page) {
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => page,
+            ),
+          );
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: Colors.blueAccent,
+          ),
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
+      );
+    }
     List<Widget> items = [
-      GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AnimatedListDemo(),
-              ));
-        },
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blueAccent),
-          child: Center(
-              child: Text(
-                'AnimatedListDemo',
-                style: TextStyle(color: Colors.white),
-              )),
-        ),
-      ),
-      GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AnimatedListPratice(),
-              ));
-        },
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blueAccent),
-          child: Center(
-              child: Text(
-                'AnimatedListPractice',
-                style: TextStyle(color: Colors.white),
-              )),
-        ),
-      ),
+      _buildListItem(context, 'AnimatedListDemo', AnimatedListDemo()),
+      _buildListItem(context, 'AnimatedListPractice', AnimatedListPractice()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,

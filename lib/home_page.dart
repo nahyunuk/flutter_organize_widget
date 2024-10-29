@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_organize_widget/animated_list_demo.dart';
 import 'package:flutter_organize_widget/animated_list_practice.dart';
+import 'package:flutter_organize_widget/tab_bar_demo.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -40,6 +41,7 @@ class _HomePageState extends State<HomePage> {
     List<Widget> items = [
       _buildListItem(context, 'AnimatedListDemo', AnimatedListDemo()),
       _buildListItem(context, 'AnimatedListPractice', AnimatedListPractice()),
+      _buildListItem(context, 'TapBarDemo', TapBarDemo())
     ];
     return Scaffold(
       backgroundColor: Colors.white,

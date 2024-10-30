@@ -8,7 +8,7 @@ class DismissibleDemo extends StatefulWidget {
 }
 
 class _DismissibleDemoState extends State<DismissibleDemo> {
-  List<int> items = List<int>.generate(10, (int index) => index);
+  List<int> items = List<int>.generate(10, (int index) => index); // 길이가 10인 List 생성
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,10 @@ class _DismissibleDemoState extends State<DismissibleDemo> {
               background: Container(
                 color: Colors.lightBlue,
               ),
-              key: ValueKey<int>(items[index]),
+              key: ValueKey<int>(items[index]),// 키 설정
               onDismissed: (direction) {
                 setState(() {
-                  items.removeAt(index);
+                  items.removeAt(index); // 리스트의 index을 삭제
                 });
               },
               child: ListTile(

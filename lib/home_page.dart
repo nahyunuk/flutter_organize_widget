@@ -3,6 +3,7 @@ import 'package:flutter_organize_widget/AnimatedList/animated_list_demo.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
+import 'package:flutter_organize_widget/SegmentedButton/segmented_button_demo.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_demo.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_practice.dart';
 
@@ -38,6 +39,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
+             textAlign: TextAlign.center,
             ),
           ),
         ),
@@ -51,6 +53,7 @@ class _HomePageState extends State<HomePage> {
       _buildListItem(context, 'TapBarPractice', TabBarPractice()),
       _buildListItem(context, 'DismissibleDemo', DismissibleDemo()),
       _buildListItem(context, 'DismissblePractice', DismissiblePractice()),
+      _buildListItem(context, 'SegmentedButton\nDemo', SegmentedButtonDemo()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -67,8 +70,8 @@ class _HomePageState extends State<HomePage> {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // 2개의 열
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
+            mainAxisSpacing: 4,
+            crossAxisSpacing: 4,
           ),
           itemCount: items.length,
           itemBuilder: (context, index) {

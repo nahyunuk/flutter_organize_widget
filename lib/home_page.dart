@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_demo.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart';
+import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
+import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_demo.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_practice.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -12,8 +15,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-
-
   Widget build(BuildContext context) {
     Widget _buildListItem(BuildContext context, String title, Widget page) {
       return GestureDetector(
@@ -33,17 +34,23 @@ class _HomePageState extends State<HomePage> {
           child: Center(
             child: Text(
               title,
-              style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),
       );
     }
+
     List<Widget> items = [
       _buildListItem(context, 'AnimatedListDemo', AnimatedListDemo()),
       _buildListItem(context, 'AnimatedListPractice', AnimatedListPractice()),
       _buildListItem(context, 'TapBarDemo', TapBarDemo()),
       _buildListItem(context, 'TapBarPractice', TabBarPractice()),
+      _buildListItem(context, 'DismissibleDemo', DismissibleDemo()),
+      _buildListItem(context, 'DismissblePractice', DismissiblePractice()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,

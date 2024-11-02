@@ -4,6 +4,7 @@ import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart
 import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
 import 'package:flutter_organize_widget/SegmentedButton/segmented_button_demo.dart';
+import 'package:flutter_organize_widget/SegmentedButton/segmented_button_practice.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_demo.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_practice.dart';
 
@@ -54,6 +55,7 @@ class _HomePageState extends State<HomePage> {
       _buildListItem(context, 'DismissibleDemo', DismissibleDemo()),
       _buildListItem(context, 'DismissblePractice', DismissiblePractice()),
       _buildListItem(context, 'SegmentedButton\nDemo', SegmentedButtonDemo()),
+      _buildListItem(context, 'SegmentedButton\nPractice',SegmentedButtonPractice()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_demo.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart';
 import 'package:flutter_organize_widget/CupertinoPicker/cupertino_picker_demo.dart';
+import 'package:flutter_organize_widget/CupertinoPicker/cupertino_picker_practice.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
 import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_demo.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget _buildListItem(BuildContext context, String title, Widget page) {
+    Widget buildListItem(BuildContext context, String title, Widget page) {
       return GestureDetector(
         onTap: () {
           Navigator.push(
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           child: Center(
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
@@ -51,22 +52,23 @@ class _HomePageState extends State<HomePage> {
     }
 
     List<Widget> items = [
-      _buildListItem(context, 'AnimatedListDemo', AnimatedListDemo()),
-      _buildListItem(context, 'AnimatedListPractice', AnimatedListPractice()),
-      _buildListItem(context, 'TapBarDemo', TapBarDemo()),
-      _buildListItem(context, 'TapBarPractice', TabBarPractice()),
-      _buildListItem(context, 'DismissibleDemo', DismissibleDemo()),
-      _buildListItem(context, 'DismissblePractice', DismissiblePractice()),
-      _buildListItem(context, 'SegmentedButton\nDemo', SegmentedButtonDemo()),
-      _buildListItem(context, 'SegmentedButton\nPractice', SegmentedButtonPractice()),
-      _buildListItem(context, 'RefreshIndicatorDemo', RefreshIndicatorDemo()),
-      _buildListItem(context, 'RefreshIndicator\nPractice', RefreshIndicatorPractice()),
-      _buildListItem(context, 'CupertinoPickerDemo', CupertinoPickerDemo()),
+      buildListItem(context, 'AnimatedListDemo', AnimatedListDemo()),
+      buildListItem(context, 'AnimatedListPractice', const AnimatedListPractice()),
+      buildListItem(context, 'TapBarDemo', const TapBarDemo()),
+      buildListItem(context, 'TapBarPractice', const TabBarPractice()),
+      buildListItem(context, 'DismissibleDemo', const DismissibleDemo()),
+      buildListItem(context, 'DismissblePractice', const DismissiblePractice()),
+      buildListItem(context, 'SegmentedButton\nDemo', const SegmentedButtonDemo()),
+      buildListItem(context, 'SegmentedButton\nPractice', const SegmentedButtonPractice()),
+      buildListItem(context, 'RefreshIndicatorDemo', const RefreshIndicatorDemo()),
+      buildListItem(context, 'RefreshIndicator\nPractice', const RefreshIndicatorPractice()),
+      buildListItem(context, 'CupertinoPickerDemo', const CupertinoPickerDemo()),
+      buildListItem(context, 'CupertinoPicker\nPractice', const CupertinoPickerPractice()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Main",
           style: TextStyle(color: Colors.white),
         ),

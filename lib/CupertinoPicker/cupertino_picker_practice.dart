@@ -65,7 +65,7 @@ class _CupertinoPickerPracticeState extends State<CupertinoPickerPractice> {
                     time[index],
                   ));
                 },
-                itemExtent: 40,
+                itemExtent: 70,
                 onSelectedItemChanged: (int value) {
                   setState(() {
                     timeString = time[value];

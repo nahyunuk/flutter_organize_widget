@@ -4,6 +4,7 @@ import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart
 import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
 import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_demo.dart';
+import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_practice.dart';
 import 'package:flutter_organize_widget/SegmentedButton/segmented_button_demo.dart';
 import 'package:flutter_organize_widget/SegmentedButton/segmented_button_practice.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_demo.dart';
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            color: Colors.blueAccent,
+            color: Colors.lightBlueAccent,
           ),
           child: Center(
             child: Text(
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
-             textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
             ),
           ),
         ),
@@ -56,8 +57,9 @@ class _HomePageState extends State<HomePage> {
       _buildListItem(context, 'DismissibleDemo', DismissibleDemo()),
       _buildListItem(context, 'DismissblePractice', DismissiblePractice()),
       _buildListItem(context, 'SegmentedButton\nDemo', SegmentedButtonDemo()),
-      _buildListItem(context, 'SegmentedButton\nPractice',SegmentedButtonPractice()),
+      _buildListItem(context, 'SegmentedButton\nPractice', SegmentedButtonPractice()),
       _buildListItem(context, 'RefreshIndicatorDemo', RefreshIndicatorDemo()),
+      _buildListItem(context, 'RefreshIndicator\nPractice', RefreshIndicatorPractice())
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -74,8 +76,8 @@ class _HomePageState extends State<HomePage> {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // 2개의 열
-            mainAxisSpacing: 4,
-            crossAxisSpacing: 4,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
           ),
           itemCount: items.length,
           itemBuilder: (context, index) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_demo.dart';
 import 'package:flutter_organize_widget/AnimatedList/animated_list_practice.dart';
+import 'package:flutter_organize_widget/CupertinoPicker/cupertino_picker_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_demo.dart';
 import 'package:flutter_organize_widget/Dismissible/dismissible_practice.dart';
 import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_demo.dart';
@@ -59,7 +60,8 @@ class _HomePageState extends State<HomePage> {
       _buildListItem(context, 'SegmentedButton\nDemo', SegmentedButtonDemo()),
       _buildListItem(context, 'SegmentedButton\nPractice', SegmentedButtonPractice()),
       _buildListItem(context, 'RefreshIndicatorDemo', RefreshIndicatorDemo()),
-      _buildListItem(context, 'RefreshIndicator\nPractice', RefreshIndicatorPractice())
+      _buildListItem(context, 'RefreshIndicator\nPractice', RefreshIndicatorPractice()),
+      _buildListItem(context, 'CupertinoPickerDemo', CupertinoPickerDemo()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,

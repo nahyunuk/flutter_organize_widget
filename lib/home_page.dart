@@ -9,6 +9,8 @@ import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_demo.
 import 'package:flutter_organize_widget/RefreshIndicator/refresh_indicator_practice.dart';
 import 'package:flutter_organize_widget/SegmentedButton/segmented_button_demo.dart';
 import 'package:flutter_organize_widget/SegmentedButton/segmented_button_practice.dart';
+import 'package:flutter_organize_widget/ShowDatePicker/show_date_picker_demo.dart';
+import 'package:flutter_organize_widget/ShowDatePicker/show_date_picker_pratice.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_demo.dart';
 import 'package:flutter_organize_widget/TabBar/tab_bar_practice.dart';
 
@@ -57,13 +59,15 @@ class _HomePageState extends State<HomePage> {
       buildListItem(context, 'TapBarDemo', const TapBarDemo()),
       buildListItem(context, 'TapBarPractice', const TabBarPractice()),
       buildListItem(context, 'DismissibleDemo', const DismissibleDemo()),
-      buildListItem(context, 'DismissblePractice', const DismissiblePractice()),
+      buildListItem(context, 'DismissiblePractice', const DismissiblePractice()),
       buildListItem(context, 'SegmentedButton\nDemo', const SegmentedButtonDemo()),
       buildListItem(context, 'SegmentedButton\nPractice', const SegmentedButtonPractice()),
       buildListItem(context, 'RefreshIndicatorDemo', const RefreshIndicatorDemo()),
       buildListItem(context, 'RefreshIndicator\nPractice', const RefreshIndicatorPractice()),
       buildListItem(context, 'CupertinoPickerDemo', const CupertinoPickerDemo()),
       buildListItem(context, 'CupertinoPicker\nPractice', const CupertinoPickerPractice()),
+      buildListItem(context, 'ShowDatePickerDemo', const ShowDatePickerDemo()),
+      buildListItem(context, 'ShowDataPicker\nPractice', const ShowDatePickerPratice()),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
